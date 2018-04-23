@@ -1,6 +1,7 @@
 
 var thinky = require("thinky")(con.rethinkdb);
 var r = thinky.r;
+global.r = thinky.r;
 
 var type = thinky.type;
 var user = thinky.createModel("bhanu",{

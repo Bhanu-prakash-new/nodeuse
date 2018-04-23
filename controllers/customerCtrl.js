@@ -18,6 +18,8 @@ module.exports = {
     },
     postCustomers: function (req, res, next) {
         var input = req.body;
+        input.created_at=r.now();
+        input.updated_at=r.now();
         DB.save(input).then(function (result) {
             return res.json({
                 success: true,
